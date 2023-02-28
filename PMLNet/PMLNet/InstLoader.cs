@@ -122,7 +122,10 @@ namespace Aveva.Core.InstLoader
                         var attName = item.ItemArray[3].ToString();
                         var attribute = $":{DbAttribute.GetDbAttribute(attName)}";
 
-                        if (attribute != null)
+                        if (attribute == null)
+							attribute = DbAttribute.GetDbAttribute(attName);
+
+						if (attribute != null)
                         {
                             var attValue = item.ItemArray[4]?.ToString();
 
