@@ -191,8 +191,8 @@ namespace Aveva.Core.InstLoader
                             i["System Class"].ToString() == "Production"
                             && i["TagIdentifier Desc"].ToString() == "Pressure Gauge")
                         .Join(dataTables.Item2.AsEnumerable(),
-                            m => m["TagType"],
-                            d => d["TagType"],
+						    d => d["TagType"],
+							m => m["TagType"],
                             (d, m) => new { d, m })
                         .Select(i => i)
                         .ToList()
