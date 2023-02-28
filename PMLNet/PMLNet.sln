@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aveva.Core.InstLoader", "PMLNet\Aveva.Core.InstLoader.csproj", "{6FBBA0FB-D6C8-46A5-BD77-AD6045AF2694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{9465526E-A434-4B27-9570-674F85C3F8C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FBBA0FB-D6C8-46A5-BD77-AD6045AF2694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FBBA0FB-D6C8-46A5-BD77-AD6045AF2694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FBBA0FB-D6C8-46A5-BD77-AD6045AF2694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FBBA0FB-D6C8-46A5-BD77-AD6045AF2694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9465526E-A434-4B27-9570-674F85C3F8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9465526E-A434-4B27-9570-674F85C3F8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9465526E-A434-4B27-9570-674F85C3F8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9465526E-A434-4B27-9570-674F85C3F8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B270741-50C4-41F6-A0B0-CC8D56B9FD9E}
+	EndGlobalSection
+EndGlobal
