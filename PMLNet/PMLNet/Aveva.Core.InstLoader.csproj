@@ -31,16 +31,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aveva.Core.Commands">
+      <HintPath>..\libs\Aveva.Core.Commands.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Aveva.Core.Database">
-      <HintPath>..\..\..\AVEVA\Administration1.4.0\Aveva.Core.Database.dll</HintPath>
+      <HintPath>..\libs\Aveva.Core.Database.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aveva.Core.Utilities">
-      <HintPath>..\..\..\AVEVA\Administration1.4.0\Aveva.Core.Utilities.dll</HintPath>
+      <HintPath>..\libs\Aveva.Core.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PMLNet">
-      <HintPath>..\..\..\AVEVA\Administration1.4.0\PMLNet.dll</HintPath>
+      <HintPath>..\libs\PMLNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

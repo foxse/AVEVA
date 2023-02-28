@@ -84,7 +84,7 @@ namespace Aveva.Core.InstLoader
                     {
                         var exists = DbElement.GetElement(tagName);
 
-                        if (exists == null)
+                        if (exists != null)
                         {
                             Command.CreateCommand($"$P Element {tagName} already exists! Skipped.").Run();
                             continue;
@@ -120,7 +120,7 @@ namespace Aveva.Core.InstLoader
                     if (currentElement != null)
                     {
                         var attName = item.ItemArray[3].ToString();
-                        var attribute = $":{DbAttribute.GetDbAttribute(attName)}";
+                        var attribute = DbAttribute.GetDbAttribute($":{attName}");
 
                         if (attribute == null)
 							attribute = DbAttribute.GetDbAttribute(attName);
