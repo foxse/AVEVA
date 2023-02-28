@@ -63,8 +63,7 @@ namespace Aveva.Core.InstLoader
             {
                 var element = DbElement.GetElement("/INST-GROUP");
 
-                //var elemType = DbElementType.GetElementType(":Instrument");
-                var elemType = DbElementType.GetElementType("UDET");
+                var elemType = DbElementType.GetElementType(":Instrument");
 
                 var sysClassAtt = DbAttribute.GetDbAttribute("SystemClass");
                 var tagDescAtt = DbAttribute.GetDbAttribute("TagIdentifierDesc");
@@ -121,7 +120,7 @@ namespace Aveva.Core.InstLoader
                     if (currentElement != null)
                     {
                         var attName = item.ItemArray[3].ToString();
-                        var attribute = DbAttribute.GetDbAttribute(attName);
+                        var attribute = $":{DbAttribute.GetDbAttribute(attName)}";
 
                         if (attribute != null)
                         {
