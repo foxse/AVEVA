@@ -204,6 +204,7 @@ namespace Aveva.Core.InstLoader
 
 				LoadedData = new DataTable();
 
+				LoadedData.Columns.Add("Row #");
 				LoadedData.Columns.Add("Tag");
 				LoadedData.Columns.Add("TagIdentifier Desc");
 				LoadedData.Columns.Add("System Class");
@@ -214,11 +215,11 @@ namespace Aveva.Core.InstLoader
 
 				foreach (DataRow dataRow in data.Rows)
 				{
-					var rowData = new string[5];
+					var rowData = new string[6];
 
-					rowData[0] = dataRow["Tag"].ToString();
-					rowData[1] = dataRow["TagIdentifier Desc"].ToString();
-					rowData[2] = dataRow["System Class"].ToString();
+					rowData[1] = dataRow["Tag"].ToString();
+					rowData[2] = dataRow["TagIdentifier Desc"].ToString();
+					rowData[3] = dataRow["System Class"].ToString();
 
 					foreach (DataColumn dataColumn in data.Columns)
 					{
@@ -227,8 +228,9 @@ namespace Aveva.Core.InstLoader
 
 						string cellVal = dataRow[dataColumn.ColumnName].ToString();
 
-						rowData[3] = dataColumn.ColumnName.Replace(" ", string.Empty);
-						rowData[4] = cellVal;
+						rowData[0] = (LoadedData.Rows.Count + 1).ToString();
+						rowData[4] = dataColumn.ColumnName.Replace(" ", string.Empty);
+						rowData[5] = cellVal;
 
 						LoadedData.Rows.Add(rowData);
 					}
